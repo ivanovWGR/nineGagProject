@@ -1,79 +1,76 @@
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }
+
 body {
     font-size: 14px;
     line-height: 1;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
+
 ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    list-style: none;
 }
 
-  #navUl{
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#nav {
+    position: relative;
+}
+
+#navUl {
     display: flex;
-    justify-content: space-around;
     flex-direction: row;
     cursor: pointer;
 }
+
 #navUl li {
     padding: 0.8rem 0;
     margin-top: 5px;
 }
 
 #navUl li a {
+    margin-right: 1.5rem;
     text-decoration: none;
-    color:white;
+    color:#fff;
     text-align: center;
 }
+
 #navUl li a:hover {
-    color:grey;
+    color: grey;
 }
 
-header  {
+header {
     background-color: #000;
     width: 100%;
     z-index: 1;
     position: fixed;
-   
 }
 
 header .logo {
+
+    margin-right: 1rem;
     display: block;
     width: 72px;
     height: 48px;
@@ -82,14 +79,142 @@ header .logo {
     text-indent: -9999px;
     overflow: hidden;
     float: left;
-    margin-left: 12px;
+    margin-left: 4rem;
 }
 
+#fuctionality {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    justify-content: space-around;
+}
 
+#weekly, #askGirls, #legSelfie {
+    position: relative;
+}
 
+#weekly::after, #askGirls::after, #legSelfie::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: -6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #4cd964;
+}
 
+#general {
 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    width: 290px;
+    margin-right: 4rem;
+}
 
+#genral a {
+    margin-right: 1.5rem;
+}
 
+#moods {
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: left;
+    text-indent: -999px;
+    overflow: hidden;
+    margin-right: 8px;
+    background-image: url(./images/Moods.png);
+    background-size: 360px 60px;
+    background-position: -330px 0;
+}
 
+#search {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -999px;
+    overflow: hidden;
+    background: url(./images/SearchIcon.png) 0 0 no-repeat;
+    background-size: 510px 120px;
+    float: left;
+}
 
+#signUp, #upload .btn-primary {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 16px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 10px;
+    background-color: #09f;
+}
+
+#signUp:hover, #upload .btn-primary:hover {
+    background-color: #33adff;
+}
+
+#upload {
+    display: none;
+}
+
+#logIn {
+    width: auto;
+    text-decoration: none;
+    display: inline-block;
+    color: #bbb;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 12px;
+}
+
+#chat {
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: left;
+    overflow: hidden;
+    margin: 0 14px 0 0;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    background: none;
+    color: #999;
+    padding: 3px 0 0 0;
+}
+
+#profilePic img{
+    width: 30px;
+    height: 30px;
+    display: none;
+    border: 0;
+    border-radius: 50%;
+}
+
+#bellIcon a {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background: url(./images/SearchIcon.png) -30px 0 no-repeat;
+    background-size: 510px 120px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    line-height: 29px
+}
+
+#bellIcon a:hover {
+    background: url(./images/SearchIcon.png) -30px -30px no-repeat;
+    background-size: 510px 120px;
+}
