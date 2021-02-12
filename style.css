@@ -115,7 +115,7 @@ header .logo {
     justify-content: space-between;
     margin-top: 0.5rem;
     width: 290px;
-    margin-right: 4rem;
+    
 }
 
 #genral a {
@@ -218,3 +218,110 @@ header .logo {
     background: url(./images/SearchIcon.png) -30px -30px no-repeat;
     background-size: 510px 120px;
 }
+
+#conteiner {
+    display: block;
+    width: 1196px;
+    padding: 48px 16px 32px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    clear: both;
+}
+
+#sidebarNav{
+    width: 190px;
+    height: 98%;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+    overscroll-behavior: contain;
+}
+
+#scroller {
+    padding-top: 22px;
+    padding-right: 20px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#firstNav{
+    padding: 0 0 12px;
+}
+
+#firstNav ul, #secondNav ul {
+    display: block;
+    margin:1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#header{
+    margin-left: 1.8rem;
+    line-height: 16px;
+    height: 16px;
+    margin-bottom: 8px;
+    color: #999;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#firstNav ul li {
+list-style: none;
+}
+#firstNav ul li .firstSection {
+    color: #000;
+    font-size: 14px;
+    height: 36px;
+    line-height: 20px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    transition: background-color .15s,padding-right .15s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 8px 8px 8px 36px;
+    text-decoration: none;
+}
+.firstSection:hover{
+    background-color: rgba(0,0,0,.05);
+    font-weight: 700;
+}
+.secondSection:hover {
+    background-color: rgba(0,0,0,.05);
+    font-weight: 700;
+}
+
+#secondSection {
+    padding: 0 0 12px;
+}
+
+#secondSection li {
+    position: relative;
+}
+
+    #secondNav .secondSection{
+    color: #000;
+    font-size: 14px;
+    height: 36px;
+    line-height: 20px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    transition: background-color .15s,padding-right .15s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 8px 8px 8px 36px;
+    text-decoration: none;
+}
+
+ .selected a , .selected a {
+    background-color: rgba(0,0,0,.05);
+    font-weight: 700;
+}
+
