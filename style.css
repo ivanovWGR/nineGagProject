@@ -12,9 +12,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body {
-    font-size: 14px;
     line-height: 1;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
 ol, ul {
@@ -35,6 +33,13 @@ table {
     border-spacing: 0;
 }
 
+body {
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+/* Top Navigation */
+
 #nav {
     position: relative;
 }
@@ -53,7 +58,7 @@ table {
 #navUl li a {
     margin-right: 1.5rem;
     text-decoration: none;
-    color:#fff;
+    color: #fff;
     text-align: center;
 }
 
@@ -61,20 +66,19 @@ table {
     color: grey;
 }
 
-header {
+#topHeader {
     background-color: #000;
     width: 100%;
     z-index: 1;
     position: fixed;
 }
 
-header .logo {
-
+#topHeader .logo {
     margin-right: 1rem;
     display: block;
     width: 72px;
     height: 48px;
-    background: url(images/sprite-logo\ \(1\).png) 50% no-repeat;
+    background: url(images/Logo.png) 50% no-repeat;
     background-size: 72px 48px;
     text-indent: -9999px;
     overflow: hidden;
@@ -109,13 +113,11 @@ header .logo {
 }
 
 #general {
-
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     margin-top: 0.5rem;
     width: 290px;
-    
 }
 
 #genral a {
@@ -130,7 +132,7 @@ header .logo {
     text-indent: -999px;
     overflow: hidden;
     margin-right: 8px;
-    background-image: url(./images/Moods.png);
+    background-image: url(images/Icons.png);
     background-size: 360px 60px;
     background-position: -330px 0;
 }
@@ -141,7 +143,7 @@ header .logo {
     height: 30px;
     text-indent: -999px;
     overflow: hidden;
-    background: url(./images/SearchIcon.png) 0 0 no-repeat;
+    background: url(images/SearchIcon.png) 0 0 no-repeat;
     background-size: 510px 120px;
     float: left;
 }
@@ -193,7 +195,7 @@ header .logo {
     padding: 3px 0 0 0;
 }
 
-#profilePic img{
+#profilePic img {
     width: 30px;
     height: 30px;
     display: none;
@@ -206,7 +208,7 @@ header .logo {
     width: 30px;
     height: 30px;
     position: relative;
-    background: url(./images/SearchIcon.png) -30px 0 no-repeat;
+    background: url(images/SearchIcon.png) -30px 0 no-repeat;
     background-size: 510px 120px;
     color: #fff;
     font-weight: 700;
@@ -215,23 +217,24 @@ header .logo {
 }
 
 #bellIcon a:hover {
-    background: url(./images/SearchIcon.png) -30px -30px no-repeat;
+    background: url(images/SearchIcon.png) -30px -30px no-repeat;
     background-size: 510px 120px;
 }
 
+/* Side Navigation */
 #conteiner {
     display: block;
     width: 1196px;
-    padding: 48px 16px 32px;
+    padding: 48px 0px 32px;
     position: relative;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0 4.8rem;
     clear: both;
 }
 
-#sidebarNav{
-    width: 190px;
-    height: 98%;
+#sidebarNav {
+    width: 209px;
+    height: 100%;
     position: fixed;
     z-index: 1;
     overflow: hidden;
@@ -239,38 +242,37 @@ header .logo {
 }
 
 #scroller {
-    padding-top: 22px;
+    padding-top: 8px;
     padding-right: 20px;
     width: 100%;
     height: 100%;
     overflow-y: scroll;
 }
 
-#firstNav{
+#firstNav, #thirdNav, #secondSection, #thirdSection {
     padding: 0 0 12px;
 }
 
-#firstNav ul, #secondNav ul {
+#firstNav ul, #secondNav ul, #thirdNav ul {
     display: block;
-    margin:1rem;
+    margin-top: 1rem;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
 
-#header{
-    margin-left: 1.8rem;
-    line-height: 16px;
-    height: 16px;
+.header {
     margin-bottom: 8px;
     color: #999;
     font-size: 12px;
     font-weight: bold;
 }
 
-#firstNav ul li {
-list-style: none;
+#firstNav li, #thirdNav li {
+    list-style: none;
+    position: relative;
 }
-#firstNav ul li .firstSection {
+
+.firstSection {
     color: #000;
     font-size: 14px;
     height: 36px;
@@ -279,31 +281,27 @@ list-style: none;
     display: block;
     position: relative;
     border-radius: 2px;
-    transition: background-color .15s,padding-right .15s;
+    transition: background-color .15s, padding-right .15s;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     padding: 8px 8px 8px 36px;
     text-decoration: none;
 }
-.firstSection:hover{
-    background-color: rgba(0,0,0,.05);
-    font-weight: 700;
-}
-.secondSection:hover {
-    background-color: rgba(0,0,0,.05);
-    font-weight: 700;
+
+.firstSection:hover, .secondSection:hover, .selected a {
+    background-color: rgba(0, 0, 0, .05);
 }
 
-#secondSection {
-    padding: 0 0 12px;
+.selected a {
+    font-weight: 700;
 }
 
 #secondSection li {
     position: relative;
 }
 
-    #secondNav .secondSection{
+.secondSection {
     color: #000;
     font-size: 14px;
     height: 36px;
@@ -312,7 +310,7 @@ list-style: none;
     display: block;
     position: relative;
     border-radius: 2px;
-    transition: background-color .15s,padding-right .15s;
+    transition: background-color .15s, padding-right .15s;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -320,8 +318,305 @@ list-style: none;
     text-decoration: none;
 }
 
- .selected a , .selected a {
-    background-color: rgba(0,0,0,.05);
-    font-weight: 700;
+.icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-size: 288px 48px;
+    background-image: url(images/Icons.png);
+    left: 4px;
+    top: 50%;
+    margin-top: -12px;
 }
 
+.more.icon {
+    visibility: hidden;
+    left: 160px;
+    background-position: -72px 0;
+    opacity: .4;
+}
+
+li:hover i.star, li:hover i.more, .hot {
+    visibility: visible;
+}
+
+.star.icon {
+    visibility: hidden;
+    background-position: -240px 0;
+    left: 160px;
+    opacity: .4;
+}
+
+.hot.icon {
+    background-position: -168px 0;
+}
+
+.trending.icon {
+    background-position: -192px 0;
+}
+
+.fresh.icon {
+    background-position: -216px 0;
+}
+
+.boards.icon {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIwIDJINGMtMS4xIDAtMS45OS45LTEuOTkgMkwyIDIybDQtNGgxNGMxLjEgMCAyLS45IDItMlY0YzAtMS4xLS45LTItMi0yek05IDExSDdWOWgydjJ6bTQgMGgtMlY5aDJ2MnptNCAwaC0yVjloMnYyeiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==);
+    background-size: 24px 24px;
+}
+
+.app.icon {
+    background-position: -48px -25px;
+}
+
+.resize {
+    background-size: 24px 24px;
+    border-radius: 10%;
+}
+
+.location.icon {
+    background-image: url(images/LocationIcon.jpeg);
+}
+
+.funny.icon {
+    background-image: url(images/FunnyIcon.jpeg);
+}
+
+.nsfw.icon {
+    background-image: url(images/NSFW_Icon.jpeg);
+}
+
+.girl.icon {
+    background-image: url(images/Girl_Icon.jpeg);
+}
+
+.wtf.icon {
+    background-image: url(images/WTF_Icon.jpeg);
+}
+
+.cryptocurrency.icon {
+    background-image: url(images/CryptocurrencyIcon.jpeg);
+}
+
+.animeAndManga.icon {
+    background-image: url(images/AnimeAndMangaIcon.jpeg);
+}
+
+.random.icon {
+    background-image: url(images/RandomIcon.jpeg);
+}
+
+.animals.icon {
+    background-image: url(images/AnimalsIcon.jpeg);
+}
+
+.animeWaifu.icon {
+    background-image: url(images/AnimeWaifuIcon.jpeg);
+}
+
+.awesome.icon {
+    background-image: url(images/AwesomeIcon.jpeg);
+}
+
+.car.icon {
+    background-image: url(images/CarIcon.jpeg);
+}
+
+.comicAndWebtoon.icon {
+    background-image: url(images/ComicAndWebtoonIcon.jpeg);
+}
+
+.cosplay.icon {
+    background-image: url(images/CosplayIcon.jpeg);
+}
+
+.cyberpunk2077.icon {
+    background-image: url(images/Cyberpunk2077Icon.jpeg);
+}
+
+.gaming.icon {
+    background-image: url(images/GamingIcon.jpeg);
+}
+
+.gif.icon {
+    background-image: url(images/GifIcon.jpeg);
+}
+
+.girlCelebrity.icon {
+    background-image: url(images/GirlCelebrityIcon.jpeg);
+}
+
+.leagueOfLegends.icon {
+    background-image: url(images/LeagueOfLegendsIcon.jpeg);
+}
+
+.meme.icon {
+    background-image: url(images/MemeIcon.jpeg);
+}
+
+.politics.icon {
+    background-image: url(images/PoliticsIcon.jpeg);
+}
+
+.relationship.icon {
+    background-image: url(images/RelationshipIcon.jpeg);
+}
+
+.savage.icon {
+    background-image: url(images/SavageIcon.jpeg);
+}
+
+.video.icon {
+    background-image: url(images/VideoIcon.jpeg);
+}
+
+.amongUs.icon {
+    background-image: url(images/AmongUsIcon.jpeg);
+}
+
+.animeWallpaper.icon {
+    background-image: url(images/AnimeWallpaperIcon.jpeg);
+}
+
+.apexLegends.icon {
+    background-image: url(images/ApexLegendsIcon.jpeg);
+}
+
+.ask9GAG.icon {
+    background-image: url(images/Ask9GAG_Icon.jpeg);
+}
+
+.coronavirus.icon {
+    background-image: url(images/CoronavirusIcon.jpeg);
+}
+
+.countryballs.icon {
+    background-image: url(images/CountryballsIcon.jpeg);
+}
+
+.cozyAndComfy.icon {
+    background-image: url(images/CozyAndComfyIcon.jpeg);
+}
+
+.crappyDesign.icon {
+    background-image: url(images/CrappyDesignIcon.jpeg);
+}
+
+.drawingDIY_AndCrafts.icon {
+    background-image: url(images/DrawingDIY_AndCraftsIcon.jpeg);
+}
+
+.fashionAndBeauty.icon {
+    background-image: url(images/FashionAndBeautyIcon.jpeg);
+}
+
+.foodAndDrinks.icon {
+    background-image: url(images/FoodAndDrinksIcon.jpeg);
+}
+
+.football.icon {
+    background-image: url(images/Football_Icon.jpeg);
+}
+
+.fortnite.icon {
+    background-image: url(images/FortniteIcon.jpeg);
+}
+
+.gameOfThrones.icon {
+    background-image: url(images/GameOfThronesIcon.jpeg);
+}
+
+.guy.icon {
+    background-image: url(images/GuyIcon.jpeg);
+}
+
+.history.icon {
+    background-image: url(images/HistoryIcon.jpeg);
+}
+
+.horror.icon {
+    background-image: url(images/HorrorIcon.jpeg);
+}
+
+.k_Pop.icon {
+    background-image: url(images/K_PopIcon.jpeg);
+}
+
+.latestNews.icon {
+    background-image: url(images/LatestNewsIcon.jpeg);
+}
+
+.lego.icon {
+    background-image: url(images/LegoIcon.jpeg);
+}
+
+.marvelAndDC.icon {
+    background-image: url(images/MarvelAndDC_Icon.jpeg);
+}
+
+.movieAndTV.icon {
+    background-image: url(images/MovieAndTV_Icon.jpeg);
+}
+
+.music.icon {
+    background-image: url(images/MusicIcon.jpeg);
+}
+
+.nba.icon {
+    background-image: url(images/NbaIcon.jpeg);
+}
+
+.overwatch.icon {
+    background-image: url(images/OverwatchIcon.jpeg);
+}
+
+.pcMasterRace.icon {
+    background-image: url(images/PcMasterRaceIcon.jpeg);
+}
+
+.pokemon.icon {
+    background-image: url(images/PokemonIcon.jpeg);
+}
+
+.pubg.icon {
+    background-image: url(images/PubgIcon.jpeg);
+}
+
+.satisfying.icon {
+    background-image: url(images/SatisfyingIcon.jpeg);
+}
+
+.scienceAndTech.icon {
+    background-image: url(images/ScienceAndTechIcon.jpeg);
+}
+
+.sport.icon {
+    background-image: url(images/SportIcon.jpeg);
+}
+
+.starWars.icon {
+    background-image: url(images/StarWarsIcon.jpeg);
+}
+
+.teensCanRelate.icon {
+    background-image: url(images/TeensCanRelateIcon.jpeg);
+}
+
+.travelAndPhotography.icon {
+    background-image: url(images/TravelAndPhotographyIcon.jpeg);
+}
+
+.wallpaper.icon {
+    background-image: url(images/WallpaperIcon.jpeg);
+}
+
+.warhammer.icon {
+    background-image: url(images/WarhammerIcon.jpeg);
+}
+
+.wholesome.icon {
+    background-image: url(images/WholesomeIcon.jpeg);
+}
+
+.darkHummor.icon {
+    background-image: url(images/DrakHummorIcon.jpeg);
+}

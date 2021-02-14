@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>9GAG</title>
-    <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
+    <header id="topHeader">
         <div id='logo'>
             <a href='javascript;;' class="logo">9GAG</a>
         </div>
@@ -64,42 +64,611 @@
                 <div id='scroller'>
                     <section id='firstNav'>
                         <ul>
-                            <li class="selected"><a href='#' class='firstSection'>Hot </a></li>
-                            <li><a href='#' class='firstSection'>Trending</a></li>
-                            <li><a href='#' class='firstSection'>Fresh</a></li>
-                            <li><a href='#' class='firstSection'>Boards</a></li>
-                            <li><a href='#' class='firstSection'>Get 9GAG app</a></li>
+                            <li class="selected">
+                                <a href='#hot' class='firstSection'>
+                                    <i class="hot icon"></i>
+                                    Hot
+                                </a>
+                                <a href="javascript;;">
+                                    <i class="more icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#trending' class='firstSection'>
+                                    <i class="trending icon"></i>
+                                    Trending
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#fresh' class='firstSection'>
+                                    <i class="fresh icon"></i>
+                                    Fresh
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#boards' class='firstSection'>
+                                    <i class="boards icon"></i>
+                                    Boards
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#get9GAGapp' class='firstSection'>
+                                    <i class="app icon"></i>
+                                    Get 9GAG app
+                                </a>
+                            </li>
                         </ul>
                     </section>
                     <section id='secondSection'>
-                        <heade>
-                            <h3 id='header'>POPULAR</h3>
-                        </heade>
+                        <header>
+                            <h3 class='header'>POPULAR</h3>
+                        </header>
                         <ul id='secondNav'>
-                            <li class="selected"><a href='' class='secondSection'>Bulgaria 🇧🇬<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Funny<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>NSFW<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Girl<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>WTF<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Cryptocurrency 🆕<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Anime & Manga<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Random <a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Animals<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Anime Waifu<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Awesome<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Car<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Comic & Webtoon<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Cosplay<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Cyberpunk 2077<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Gaming<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>GIF<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Girl Celebrity<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>League of Legends<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Meme<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Politics <a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Relationship<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Savage<a href=""></a></a></li>
-                            <li><a href='' class='secondSection'>Video<a href=""></a></a></li>
+                            <li>
+                                <a href='#bulgaria' class='secondSection'>
+                                    <i class="location icon resize"></i>
+                                    Bulgaria 🇧🇬
+                                </a>
+                                <a href="#bulgaria">
+                                    <i class="more icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#funny' class='secondSection'>
+                                    <i class="funny icon resize"></i>
+                                    Funny
+                                </a>
+                                <a href="#funny">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#nsfw' class='secondSection'>
+                                    <i class="nsfw icon resize"></i>
+                                    NSFW
+                                </a>
+                                <a href="#nsfw">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#girl' class='secondSection'>
+                                    <i class="girl icon resize"></i>
+                                    Girl
+                                </a>
+                                <a href="#girl">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#wtf' class='secondSection'>
+                                    <i class="wtf icon resize"></i>
+                                    WTF
+                                </a>
+                                <a href="#wtf">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#cryptocurrency' class='secondSection'>
+                                    <i class="cryptocurrency icon resize"></i>
+                                    Cryptocurrency 🆕
+                                </a>
+                                <a href="#cryptocurrency">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#animeAndManga' class='secondSection'>
+                                    <i class="animeAndManga icon resize"></i>
+                                    Anime &amp; Manga
+                                </a>
+                                <a href="#animeAndManga">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#random' class='secondSection'>
+                                    <i class="random icon resize"></i>
+                                    Random
+                                </a>
+                                <a href="#random">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#animals' class='secondSection'>
+                                    <i class="animals icon resize"></i>
+                                    Animals
+                                </a>
+                                <a href="#animals">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#animeWaifu' class='secondSection'>
+                                    <i class="animeWaifu icon resize"></i>
+                                    Anime Waifu
+                                </a>
+                                <a href="#animeWaifu">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#awesome' class='secondSection'>
+                                    <i class="awesome icon resize"></i>
+                                    Awesome
+                                </a>
+                                <a href="#awesome">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#car' class='secondSection'>
+                                    <i class="car icon resize"></i>
+                                    Car
+                                </a>
+                                <a href="#car">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#comicAndWebtoon' class='secondSection'>
+                                    <i class="comicAndWebtoon icon resize"></i>
+                                    Comic &amp; Webtoon
+                                </a>
+                                <a href="#comicAndWebtoon">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#cosplay' class='secondSection'>
+                                    <i class="cosplay icon resize"></i>
+                                    Cosplay
+                                </a>
+                                <a href="#cosplay">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#cyberpunk2077' class='secondSection'>
+                                    <i class="cyberpunk2077 icon resize"></i>
+                                    Cyberpunk 2077
+                                </a>
+                                <a href="#cyberpunk2077">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#gaming' class='secondSection'>
+                                    <i class="gaming icon resize"></i>
+                                    Gaming
+                                </a>
+                                <a href="#gaming">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#gif' class='secondSection'>
+                                    <i class="gif icon resize"></i>
+                                    GIF
+                                </a>
+                                <a href="#gif">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#girlCelebrity' class='secondSection'>
+                                    <i class="girlCelebrity icon resize"></i>
+                                    Girl Celebrity
+                                </a>
+                                <a href="#girlCelebrity">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#leagueOfLegends' class='secondSection'>
+                                    <i class="leagueOfLegends icon resize"></i>
+                                    League of Legends
+                                </a>
+                                <a href="#leageOfLegends">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#meme' class='secondSection'>
+                                    <i class="meme icon resize"></i>
+                                    Meme
+                                </a>
+                                <a href="#meme">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#politics' class='secondSection'>
+                                    <i class="politics icon resize"></i>
+                                    Politics
+                                </a>
+                                <a href="#politics">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#relationship' class='secondSection'>
+                                    <i class="relationship icon resize"></i>
+                                    Relationship
+                                </a>
+                                <a href="#relationship">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#savage' class='secondSection'>
+                                    <i class="savage icon resize"></i>
+                                    Savage
+                                </a>
+                                <a href="#savage">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#video' class='secondSection'>
+                                    <i class="video icon resize"></i>
+                                    Video
+                                </a>
+                                <a href="#video">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section id='thirdSection'>
+                        <header>
+                            <h3 class='header'>SECTIONS</h3>
+                        </header>
+                        <ul id='thirdNav'>
+                            <li>
+                                <a href='#amongUs' class='secondSection'>
+                                    <i class="amongUs icon resize"></i>
+                                    Among Us
+                                </a>
+                                <a href="#amongUs">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#animeWallpaper' class='secondSection'>
+                                    <i class="animeWallpaper icon resize"></i>
+                                    Anime Wallpaper
+                                </a>
+                                <a href="#animeWallpaper">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#apexLegends' class='secondSection'>
+                                    <i class="apexLegends icon resize"></i>
+                                    Apex Legends
+                                </a>
+                                <a href="#apexLegends">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#ask9GAG' class='secondSection'>
+                                    <i class="ask9GAG icon resize"></i>
+                                    Ask 9GAG
+                                </a>
+                                <a href="#ask9GAG">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#coronavirus' class='secondSection'>
+                                    <i class="coronavirus icon resize"></i>
+                                    Coronavirus
+                                </a>
+                                <a href="#coronavirus">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#countryballs' class='secondSection'>
+                                    <i class="countryballs icon resize"></i>
+                                    Countryballs
+                                </a>
+                                <a href="#countryballs">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#cozyAndComfy' class='secondSection'>
+                                    <i class="cozyAndComfy icon resize"></i>
+                                    Cozy &amp; Comfy
+                                </a>
+                                <a href="#cozyAndComfy">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#crappyDesign' class='secondSection'>
+                                    <i class="crappyDesign icon resize"></i>
+                                    Crappy Design
+                                </a>
+                                <a href="#crappyDesign">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#drawingDIY_AndCrafts' class='secondSection'>
+                                    <i class="drawingDIY_AndCrafts icon resize"></i>
+                                    Drawing, DIY &amp; Crafts
+                                </a>
+                                <a href="#drawingDIY_AndCrafts">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#fashionAndBeauty' class='secondSection'>
+                                    <i class="fashionAndBeauty icon resize"></i>
+                                    Fashion &amp; Beauty
+                                </a>
+                                <a href="#fashionAndBeauty">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#foodAndDrinks' class='secondSection'>
+                                    <i class="foodAndDrinks icon resize"></i>
+                                    Food &amp; Drinks
+                                </a>
+                                <a href="#foodAndDrinks">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#football' class='secondSection'>
+                                    <i class="football icon resize"></i>
+                                    Football
+                                </a>
+                                <a href="#football">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#fortnite' class='secondSection'>
+                                    <i class="fortnite icon resize"></i>
+                                    Fortnite
+                                </a>
+                                <a href="#fortnite">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#gameOfThrones' class='secondSection'>
+                                    <i class="gameOfThrones icon resize"></i>
+                                    gameOfThrones
+                                </a>
+                                <a href="#gameOfThrones">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#guy' class='secondSection'>
+                                    <i class="guy icon resize"></i>
+                                    Guy
+                                </a>
+                                <a href="#guy">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#history' class='secondSection'>
+                                    <i class="history icon resize"></i>
+                                    History
+                                </a>
+                                <a href="#history">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#horror' class='secondSection'>
+                                    <i class="horror icon resize"></i>
+                                    Horror
+                                </a>
+                                <a href="#horror">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#k_Pop' class='secondSection'>
+                                    <i class="k_Pop icon resize"></i>
+                                    K-Pop
+                                </a>
+                                <a href="#k_Pop">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#latestNews' class='secondSection'>
+                                    <i class="latestNews icon resize"></i>
+                                    Latest News
+                                </a>
+                                <a href="#latestNews">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#lego' class='secondSection'>
+                                    <i class="lego icon resize"></i>
+                                    LEGO
+                                </a>
+                                <a href="#lego">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#marvelAndDC' class='secondSection'>
+                                    <i class="marvelAndDC icon resize"></i>
+                                    Marvel &amp; DC
+                                </a>
+                                <a href="#marvelAndDC">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#movieAndTV' class='secondSection'>
+                                    <i class="movieAndTV icon resize"></i>
+                                    Movie &amp; TV
+                                </a>
+                                <a href="#movieAndTV">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#music' class='secondSection'>
+                                    <i class="music icon resize"></i>
+                                    Music
+                                </a>
+                                <a href="#music">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#nba' class='secondSection'>
+                                    <i class="nba icon resize"></i>
+                                    NBA
+                                </a>
+                                <a href="#nba">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#overwatch' class='secondSection'>
+                                    <i class="overwatch icon resize"></i>
+                                    Overwatch
+                                </a>
+                                <a href="#overwatch">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#pcMasterRace' class='secondSection'>
+                                    <i class="pcMasterRace icon resize"></i>
+                                    PC Master Race
+                                </a>
+                                <a href="#pcMasterRace">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#pokemon' class='secondSection'>
+                                    <i class="pokemon icon resize"></i>
+                                    Pokémon
+                                </a>
+                                <a href="#pokemon">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#pubg' class='secondSection'>
+                                    <i class="pubg icon resize"></i>
+                                    PUBG
+                                </a>
+                                <a href="#pubg">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#satisfying' class='secondSection'>
+                                    <i class="satisfying icon resize"></i>
+                                    Satisfying
+                                </a>
+                                <a href="#satisfying">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#scienceAndTech' class='secondSection'>
+                                    <i class="scienceAndTech icon resize"></i>
+                                    Science &amp; Tech
+                                </a>
+                                <a href="#scienceAndTech">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#sport' class='secondSection'>
+                                    <i class="sport icon resize"></i>
+                                    Sport
+                                </a>
+                                <a href="#sport">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#starWars' class='secondSection'>
+                                    <i class="starWars icon resize"></i>
+                                    Star Wars
+                                </a>
+                                <a href="#starWars">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#teensCanRelate' class='secondSection'>
+                                    <i class="teensCanRelate icon resize"></i>
+                                    Teens Can Relate
+                                </a>
+                                <a href="#teensCanRelate">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#travelAndPhotography' class='secondSection'>
+                                    <i class="travelAndPhotography icon resize"></i>
+                                    Travel &amp; Photography
+                                </a>
+                                <a href="#travelAndPhotography">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#wallpaper' class='secondSection'>
+                                    <i class="wallpaper icon resize"></i>
+                                    Wallpaper
+                                </a>
+                                <a href="#wallpaper">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#warhammer' class='secondSection'>
+                                    <i class="warhammer icon resize"></i>
+                                    Warhammer
+                                </a>
+                                <a href="#warhammer">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#wholesome' class='secondSection'>
+                                    <i class="wholesome icon resize"></i>
+                                    Wholesome
+                                </a>
+                                <a href="#wholesome">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#darkHumor' class='secondSection'>
+                                    <i class="darkHumor icon resize"></i>
+                                    Dark Humor
+                                </a>
+                                <a href="#darkHumor">
+                                    <i class="star icon"></i>
+                                </a>
+                            </li>
                         </ul>
                     </section>
                 </div>
