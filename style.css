@@ -6,6 +6,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font: inherit;
     vertical-align: baseline;
 }
+html,body {
+    height: 100%;
+}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
@@ -56,7 +59,7 @@ body {
 }
 
 #navUl li a {
-    margin-right: 1.5rem;
+    margin-right: 1.2rem;
     text-decoration: none;
     color: #fff;
     text-align: center;
@@ -104,8 +107,8 @@ body {
     content: " ";
     display: block;
     position: absolute;
-    top: -2px;
-    right: -6px;
+    top: -4px;
+    right: -7px;
     width: 8px;
     height: 8px;
     border-radius: 4px;
@@ -222,26 +225,28 @@ body {
 }
 
 /* Side Navigation */
-#conteiner {
-    display: block;
+#mainConteiner {
+    clear:both;
     width: 1196px;
-    padding: 48px 0px 32px;
+    padding: 48px 16px 32px;
     position: relative;
-    overflow: hidden;
-    margin: 0 4.8rem;
-    clear: both;
+    display: block;
+    margin: auto;
+    height:100%;
 }
 
 #sidebarNav {
     width: 209px;
-    height: 100%;
+    height: calc(100% - 48px);
     position: fixed;
     z-index: 1;
     overflow: hidden;
     overscroll-behavior: contain;
+    padding:0 0 12px;
 }
 
 #scroller {
+    display: block;
     padding-top: 8px;
     padding-right: 20px;
     width: 100%;
@@ -619,4 +624,26 @@ li:hover i.star, li:hover i.more, .hot {
 
 .darkHummor.icon {
     background-image: url(images/DrakHummorIcon.jpeg);
+}
+#footer {
+    padding-bottom: 24px;
+    display: block;
+}
+
+.footerText {
+    font-size: 12px;
+    color:#999;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+
+.footerText a {
+    color:#999;
+    margin-right: 4px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footerText a:hover {
+    color:#666;
 }
