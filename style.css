@@ -622,8 +622,8 @@ li:hover i.star, li:hover i.more, .hot {
     background-image: url(images/WholesomeIcon.jpeg);
 }
 
-.darkHummor.icon {
-    background-image: url(images/DrakHummorIcon.jpeg);
+.darkHumor.icon {
+    background-image: url(images/DarkHumorIcon.jpeg);
 }
 #footer {
     padding-bottom: 24px;
