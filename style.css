@@ -542,8 +542,8 @@ li:hover i.star, li:hover i.more, .hot {
     background-image: url(images/HorrorIcon.jpeg);
 }
 
-.k_Pop.icon {
-    background-image: url(images/K_PopIcon.jpeg);
+.k-Pop.icon {
+    background-image: url(images/K-PopIcon.jpeg);
 }
 
 .latestNews.icon {
