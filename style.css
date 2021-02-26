@@ -35,6 +35,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+a {
+    text-decoration: none;
+}
 
 body {
     font-size: 14px;
@@ -224,7 +227,7 @@ body {
     background-size: 510px 120px;
 }
 
-/* Side Navigation */
+
 #mainConteiner {
     clear:both;
     width: 1196px;
@@ -646,4 +649,44 @@ li:hover i.star, li:hover i.more, .hot {
 
 .footerText a:hover {
     color:#666;
+}
+.sidebar {
+    position: relative;
+    display:block;
+    float: right;
+    width: 300px;
+    height: 1200px;
+    
+}
+.ad-conteiner{
+    width: 300px;
+    min-height: 250px;
+    max-height: 600px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.ad-conteiner a {
+    color: black;
+}
+.first-conteiner {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.difcont{
+    margin-bottom: 40px;
+}
+.last-conteiner {
+    background-color: white;
+}
+.info-conteiner{
+    margin-top: 10px;
+}
+.desc {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+.info-conteiner:hover{
+    color:#09f;
 }
