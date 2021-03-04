@@ -6,7 +6,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font: inherit;
     vertical-align: baseline;
 }
-html,body {
+
+html, body {
     height: 100%;
 }
 
@@ -35,6 +36,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 a {
     text-decoration: none;
 }
@@ -227,15 +229,14 @@ body {
     background-size: 510px 120px;
 }
 
-
 #mainConteiner {
-    clear:both;
+    clear: both;
     width: 1196px;
     padding: 48px 16px 32px;
     position: relative;
     display: block;
     margin: auto;
-    height:100%;
+    height: 100%;
 }
 
 #sidebarNav {
@@ -245,7 +246,7 @@ body {
     z-index: 1;
     overflow: hidden;
     overscroll-behavior: contain;
-    padding:0 0 12px;
+    padding: 0 0 12px;
 }
 
 #scroller {
@@ -628,6 +629,7 @@ li:hover i.star, li:hover i.more, .hot {
 .darkHumor.icon {
     background-image: url(images/Dark\ Humor.jpeg);
 }
+
 #footer {
     padding-bottom: 24px;
     display: block;
@@ -635,58 +637,218 @@ li:hover i.star, li:hover i.more, .hot {
 
 .footerText {
     font-size: 12px;
-    color:#999;
+    color: #999;
     line-height: 18px;
     margin-bottom: 8px;
 }
 
 .footerText a {
-    color:#999;
+    color: #999;
     margin-right: 4px;
     display: inline-block;
     text-decoration: none;
 }
 
 .footerText a:hover {
-    color:#666;
+    color: #666;
 }
+
 .sidebar {
     position: relative;
-    display:block;
+    display: block;
     float: right;
     width: 300px;
     height: 1200px;
-    
 }
-.ad-conteiner{
+
+.ad-conteiner {
     width: 300px;
     min-height: 250px;
     max-height: 600px;
     overflow: hidden;
     margin-bottom: 5px;
 }
+
 .ad-conteiner a {
     color: black;
 }
+
 .first-conteiner {
     margin-top: 20px;
     margin-bottom: 10px;
 }
-.difcont{
+
+.difcont {
     margin-bottom: 40px;
 }
+
 .last-conteiner {
     background-color: white;
 }
-.info-conteiner{
+
+.info-conteiner {
     margin-top: 10px;
 }
+
 .desc {
     font-size: 18px;
     line-height: 20px;
     font-weight: 400;
     word-wrap: break-word;
 }
-.info-conteiner:hover{
-    color:#09f;
+
+.info-conteiner:hover {
+    color: #09f;
+}
+
+/* Middle Section */
+
+#middle {
+    margin-left: 14rem;
+    margin-top: 1.5rem;
+    width: 640px;
+}
+
+#middleSectionTop, article>header {
+    display: flex;
+    flex-direction: row;
+}
+
+article>header>p {
+    margin-top: 0.2rem;
+    margin-left: 0.3rem;
+    font-size: 12px;
+    color: #999;
+}
+
+article>p {
+    color: #999;
+    margin: 0.8rem 0;
+}
+
+article>h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.greyLine {
+    margin: 1.5rem 0;
+    width: 640;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+#middleSectionHeader {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+#middleSectionHeader p {
+    margin-top: 3px;
+    color: #999;
+}
+
+#middleSectionHeader h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.bottomButtons, .bottomButtons ul {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottomButtons>ul li a {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 44px;
+    height: 34px;
+    display: block;
+    text-indent: -999px;
+    position: relative;
+    margin-right: 0.5rem;
+}
+
+.up {
+    background: url(images/SearchIcon.png) -113px 0 no-repeat;
+}
+
+.down {
+    background: url(images/SearchIcon.png) -144px 0 no-repeat;
+}
+
+.comment {
+    background: url(images/SearchIcon.png) -174px 0 no-repeat;
+}
+
+.bottomButtonMore {
+    background: url(images/SearchIcon.png) -294px 0 no-repeat;
+}
+
+.up, .down, .comment, .bottomButtonMore {
+    background-size: 510px 120px;
+}
+
+.facebook {
+    margin-right: 0.5rem;
+    margin-left: 4rem;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    height: 34px;
+    background-color: #3b5998;
+    line-height: 34px;
+    padding: 0 15px 0 34px;
+    border-radius: 2px;
+    text-align: center;
+    position: relative;
+}
+
+.facebook:after {
+    content: " ";
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    left: 2px;
+    background: url(images/SearchIcon.png) -90px -30px no-repeat;
+    background-size: 510px 120px;
+}
+
+.facebook:hover {
+    background-color: #4c70ba;
+}
+
+.pinterest {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    height: 34px;
+    background-color: #bd081c;
+    line-height: 34px;
+    padding: 0 15px 0 34px;
+    border-radius: 2px;
+    text-align: center;
+    position: relative;
+}
+
+.pinterest:after {
+    content: " ";
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    left: 2px;
+    background: url(images/SearchIcon.png) -390px -30px no-repeat;
+    background-size: 510px 120px;
+}
+
+.pinterest:hover {
+    background-color: #cc0a23;
 }

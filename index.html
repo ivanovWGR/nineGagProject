@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>9GAG</title>
+    <link rel="shortcut icon" href="images/FavIcon.ico">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -446,7 +450,7 @@
                         <li>
                             <a href='#Game-Of-Thrones' class='secondSection'>
                                 <i class="gameOfThrones icon resize"></i>
-                                gameOfThrones
+                                Game Of Thrones
                             </a>
                             <a href="#Game-Of-Thrones">
                                 <i class="star icon"></i>
@@ -691,6 +695,7 @@
                 </section>
             </div>
         </div>
+        <section id="middle"></section>
         <div class="sidebar">
             <section class="iframe-ad">
                 <div class='ad-conteiner first-conteiner'>
@@ -754,5 +759,94 @@
         </div>
     </div>
 </body>
+<script id="myMiddleSection" type="text/x-handlebars-template">
+    <div id="middleSectionTop">
+        <img src="images/{{hash}}.jpeg" alt="Profile Icon" width="80" height="80">
+        <header id="middleSectionHeader">
+            <h2>{{hash}}</h2>
+            <p>{{description}}</p>
+        </header>
+    </div>
+    <br>
+    <div class="greyLine"></div>
+    <br>
+    {{#each articles}}
+        {{> article}}
+    {{/each}}
+</script>
+<script id="partials" type="text/x-handlebars-template">
+    {{#each articles}}
+        {{> article}}
+    {{/each}}
+</script>
+<script id="myArticlePartial" type="text/x-handlebars-template">
+    <article>
+        <header>
+            <img src="images/{{category}}.jpeg" alt="icon" width="20" height="20">
+            <p>{{category}} - {{date}}</p>
+        </header>
+        <br>
+        <h1>{{title}}</h1>
+        <br>
+        <img src="{{img}}" alt="Article's Picture">
+        <p>{{points}} points - {{comments}} comments</p>
+        <div class="bottomButtons">
+            <ul>
+                <li><a class="up" href="javascript:void(0);"><span>UP</span></a></li>
+                <li><a class="down" href="javascript:void(0);"><span>DOWN</span></a></li>
+                <li><a class="comment" href="javascript:void(0)">Comment</a></li>
+                <li><a class="bottomButtonMore" href="javascript:void(0);">More</a></li>
+            </ul>
+            <div class="share">
+                <ul>
+                    <li><a class="facebook" href="javascript:void(0);"> Facebook </a></li>
+                    <li><a class="pinterest" href="javascript:void(0);"> Pinterest </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="greyLine"></div>
+    </article>
+</script>
+<script src="data.js"></script>
+<script>
+    Handlebars.registerPartial('article', document.getElementById('myArticlePartial').innerHTML);
+    let template = Handlebars.compile(document.getElementById('myMiddleSection').innerHTML);
+    let partials = Handlebars.compile(document.getElementById('partials').innerHTML)
+    window.addEventListener('hashchange', router);
+
+    function router(e) {
+        let hash = location.hash.slice(1).replaceAll('-', ' ');
+        let middleSection = document.getElementById('middle');
+        middleSection.innerHTML = '';
+        let context = {};
+        context.hash = hash;
+
+        switch (hash) {
+            case 'Hot':
+                context.articles = data.slice().sort((a, b) => Number(b.comments) - Number(a.comments)).slice(0, 5);
+                middleSection.innerHTML = partials(context);
+                break;
+            case 'Trending':
+                context.articles = data.slice().sort((a, b) => Number(b.points) - Number(a.points)).slice(0, 5);
+                middleSection.innerHTML = partials(context);
+                break;
+            case 'Fresh':
+                context.articles = data.slice().sort((a, b) => {
+                    return Number(b.date.split('.').reverse().join('')) - Number(a.date.split('.').reverse().join(''));
+                }).slice(0, 5);
+                middleSection.innerHTML = partials(context);
+                break;
+            default:
+                context.articles = data.filter(article => article.category === hash);
+
+                if (context.articles.length > 0) {
+                    context.description = context.articles[0].description;
+                    middleSection.innerHTML = template(context);
+                }
+
+        }
+
+    }
+</script>
 
 </html>
