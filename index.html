@@ -13,6 +13,32 @@
 </head>
 
 <body>
+    <div class="overlay" id='modalCont'>
+        <section class="modal"><a class="btn-close" id='closeBtn' href="javascript:void(0);">✖</a>
+            <section id="signup">
+                <div id="signup-fb">
+                    <h2>Hey there!</h2>
+                    <p class="descLead">9GAG is your best source for fun. Share anything you find interesting, get real
+                        responses from people all over the world, and discover what makes you laugh.</p>
+                    <div class="social-signup"><a class="btn-connect-option faceebook" href="https://www.facebook.com/">
+                            Facebook </a><a class="btn-connect-option google"
+                            href="https://www.google.com/account/about/"> Google </a>
+                    </div>
+                    <p class="alternative">Sign up with your <a href="javascript:void(0);">Email</a></p>
+                    <p class="alternative">Have an account? <a href="javascript:void(0);">Log in</a></p>
+                    <div class="get-the-app-component">
+                        <div class="get-the-app">
+                            <h3>Get 9GAG app</h3>
+                            <div id='conteinerApp'>
+                                <li><a class="app-store" href="#" target="_blank">Download on App Store</a></li>
+                                <a class="google-play" href="#" target="_blank">Get it on Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
     <header id="topHeader">
         <div id='logo'>
             <a href='javascript;;' class="logo">9GAG</a>
@@ -822,7 +848,7 @@
             console.log(err);
         }
 
-        let hash = location.hash.slice(1).replaceAll('-', ' ');
+        let hash = location.hash.slice(1)
         let middleSection = document.getElementById('middle');
         middleSection.innerHTML = '';
         let context = {};
@@ -855,5 +881,7 @@
 
     }
 </script>
+<script src='assets/userModel.js'></script>
+<script src='assets/userControler.js'></script>
 
 </html>
