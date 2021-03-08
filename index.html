@@ -24,8 +24,90 @@
                             Facebook </a><a class="btn-connect-option google"
                             href="https://www.google.com/account/about/"> Google </a>
                     </div>
-                    <p class="alternative">Sign up with your <a href="javascript:void(0);">Email</a></p>
-                    <p class="alternative">Have an account? <a href="javascript:void(0);">Log in</a></p>
+                    <p class="alternative">Sign up with your <a href="javascript:void(0);" id='emailModalBtn'>Email</a>
+                    </p>
+                    <p class="alternative">Have an account? <a href="javascript:void(0);" id='loginModalBtn'>Log in</a>
+                    </p>
+                    <div class="get-the-app-component">
+                        <div class="get-the-app">
+                            <h3>Get 9GAG app</h3>
+                            <div id='conteinerApp'>
+                                <li><a class="app-store" href="#" target="_blank">Download on App Store</a></li>
+                                <a class="google-play" href="#" target="_blank">Get it on Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+    <div class="overlay overlay-email" id='modalEmail'>
+        <section class="modal-email"><a class="btn-close" id='close' href="javascript:void(0);">✖</a>
+            <section id="signup">
+                <div id="signup-email">
+                    <h2>Become a member</h2>
+                    <form id='registerForm'>
+                        <div>
+                            <div class="field"><label for="signup-email-name">Full name</label><input
+                                    id="nameInputReg" type="text" name="fullname" placeholder="" maxlength="20">
+                            </div>
+                            <div class="field"><label for="signup-email-email">Email</label><input
+                                    id="emailInputReg" type="email" name="email" placeholder=""></div>
+                            <div class="field"><label for="signup-email-password">Password</label><input
+                                    id="passwordInputReg" type="password" name="password" minlength="6"
+                                    maxlength="32"></div>
+                            <div><input id="signup-email-news" type="checkbox"><label for="signup-email-news"
+                                    class="signup-email-news"> Sign up for our newsletter. You can unsubscribe any time.
+                                    See our <a target="_blank" href="/privacy">Privacy Policy</a> for more details.
+                                </label></div>
+                        </div>
+                        <div class="field" style="display: none;"><label for="signup-email-age">Age</label><input
+                                type="text" id="signup-email-age" placeholder="Your age"></div>
+                        <div class="field captcha">
+                            <div>
+                                <div style="width: 304px; height: 78px;">
+                                    <div><iframe
+                                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lf0iMkSAAAAALGZpEfzpO13sqJNiEgr6znqfm9r&amp;co=aHR0cHM6Ly85Z2FnLmNvbTo0NDM.&amp;hl=en&amp;v=4eHYAlZEVyrAlR9UNnRUmNcL&amp;theme=light&amp;size=normal&amp;cb=o6pbprep6vc7"
+                                            width="304" height="78" role="presentation" name="a-mzko2wn9rr4y"
+                                            frameborder="0" scrolling="no"
+                                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                    </div><textarea id="g-recaptcha-response-4" name="g-recaptcha-response"
+                                        class="g-recaptcha-response"
+                                        style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                </div><iframe style="display: none;"></iframe>
+                            </div>
+                            <p class="error-message red"></p>
+                        </div>
+                        <div class="btn-container"><a class="btn left" id='signUpBtn' href="javascript:void(0)">Sign up</a></div><input
+                            type="hidden" name="next" value="/"><input type="hidden" name="src"><input type="hidden"
+                            name="ref"><input type="hidden" name="ageVerified" value="0"><input type="hidden"
+                            name="subscribeNews" value="0"><input type="hidden" name="app" value="web">
+                    </form>
+                </div>
+            </section>
+        </section>
+    </div>
+    <div class="overlay-scroll-container" id='modalLogin'>
+        <section class="modal"><a class="btn-close" href="javascript:void(0); " id='closeLogIn'>✖</a>
+            <section id="signup">
+                <div>
+                    <h2>Log in</h2>
+                    <p class="lead">Connect with a social network</p>
+                    <div class="social-signup"><a class="btn-connect-option faceebook" href="https://www.facebook.com/">
+                        Facebook </a><a class="btn-connect-option google"
+                        href="https://www.google.com/account/about/"> Google </a>
+                </div>
+                    <form id="login-email" action="/login" method="POST"><input type="hidden" name="next" value="/">
+                        <p class="lead">Log in with your Email</p>
+                        <div class="field"><label  class='label' for="login-email-name">Email</label><input id="emailLogInput"
+                                type="text" name="email" required></div>
+                        <div class="field"><label class="label" for="login-email-password">Password</label><input
+                                id="passwordLogInput" type="password" name="password" required>
+                        
+                        </div>
+                        <div class="btn-container"><input class="btn left" type="submit" id='loginButton' value="Log in"><a
+                                class="forgot-password" href="/recover" id='forgetPassword'> Forgot password </a></div>
+                    </form>
                     <div class="get-the-app-component">
                         <div class="get-the-app">
                             <h3>Get 9GAG app</h3>
@@ -881,6 +963,7 @@
 
     }
 </script>
+<script src='assets/uttils.js'></script>
 <script src='assets/userModel.js'></script>
 <script src='assets/userControler.js'></script>
 

@@ -1001,3 +1001,174 @@ section#signup p.alternative a {
     background-color: #cc0a23;
 }
 
+.overlay-email{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 13;
+    overflow: scroll;
+    background-color: rgba(0,0,0,.8);
+    }
+    
+    .modal-email {
+    width: 540px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -270px;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    border-radius: 2px;
+    padding-bottom: 32px;
+    }
+    
+    .btn-close {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        color: #ddd;
+        text-decoration: none;
+        display: block;
+        width: 24px;
+        height: 24px;
+        text-indent: -999px;
+        overflow: hidden;
+        background: url(images/icon-close.png) 50% no-repeat;
+    }
+    
+    #signup{
+    width: 460px;
+    font-size: 14px;
+    margin: 40px auto 0;
+    
+    }
+    
+    #signup-email{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    }
+    
+    .field {
+    font-size: 14px;
+    padding: 0;
+    outline: 0;
+    margin: 20px 0;
+    position: relative;
+    }
+    
+    #nameInputReg , #emailInputReg , #passwordInputReg{
+    outline: 0;
+    border: 1px solid #ddd;
+    line-height: 20px;
+    height: 20px;
+    padding: 9px;
+    border-radius: 2px;
+    display: block;
+    margin: 6px 0;
+    width: 440px;
+    }
+    
+    #signUpBtn {
+    margin: 0;
+    outline: 0;
+    float: left;
+    color: #fff;
+    background-color: #09f;
+    padding: 8px 16px;
+    height: 20px;
+    border: none;
+    border-radius: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-sizing: content-box;
+    }
+    
+    #modalLogin{
+        display: none;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 13;
+        overflow: scroll;
+        background-color: rgba(0,0,0,.8);
+    }
+    
+    .lead {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    margin-bottom: 20px;
+    line-height: 1.6em;
+    color: #999;
+    }
+    
+    #emailLogInput , #passwordLogInput {
+    outline: 0;
+    border: 1px solid #ddd;
+    line-height: 20px;
+    height: 20px;
+    padding: 9px;
+    border-radius: 2px;
+    display: block;
+    margin: 6px 0;
+    width: 440px;
+    
+    }
+    
+    #loginButton{
+    margin: 0;
+    outline: 0;
+    float: left;
+    color: #fff;
+    background-color: #09f;
+    padding: 8px 16px;
+    height: 20px;
+    border: none;
+    border-radius: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-sizing: content-box;
+    }
+    
+    #forgetPassword {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    display: inline-block;
+    color: #999;
+    float: right;
+    font-size: 14px;
+    line-height: 40px;
+    }
+    
+    .label{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    display: block;
+    font-weight: 700;
+    }
