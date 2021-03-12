@@ -31,6 +31,8 @@
     )
     close.addEventListener('click', () => {
         modalEmail.style.display = 'none';
+        modalCont.style.display = 'none';
+
     })
 
     logIn.addEventListener('click',()=>{
