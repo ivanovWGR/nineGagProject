@@ -48,14 +48,17 @@
                     <h2>Become a member</h2>
                     <form id='registerForm'>
                         <div>
-                            <div class="field"><label for="signup-email-name">Full name</label><input
-                                    id="nameInputReg" type="text" name="fullname" placeholder="" maxlength="20">
+                            <div class="field"><label for="signup-email-name">Full name</label><input id="nameInputReg"
+                                    type="text" name="fullname" placeholder="" maxlength="20">
                             </div>
-                            <div class="field"><label for="signup-email-email">Email</label><input
-                                    id="emailInputReg" type="email" name="email" placeholder=""></div>
+                            <div class="field"><label for="signup-email-email">Email</label><input id="emailInputReg"
+                                    type="email" name="email" placeholder=""></div>
                             <div class="field"><label for="signup-email-password">Password</label><input
-                                    id="passwordInputReg" type="password" name="password" minlength="6"
-                                    maxlength="32"></div>
+                                    id="passwordInputReg" type="password" name="password" minlength="6" maxlength="32">
+                            </div>
+                            <div id='errorRegister'>
+
+                            </div>
                             <div><input id="signup-email-news" type="checkbox"><label for="signup-email-news"
                                     class="signup-email-news"> Sign up for our newsletter. You can unsubscribe any time.
                                     See our <a target="_blank" href="/privacy">Privacy Policy</a> for more details.
@@ -78,10 +81,11 @@
                             </div>
                             <p class="error-message red"></p>
                         </div>
-                        <div class="btn-container"><a class="btn left" id='signUpBtn' href="javascript:void(0)">Sign up</a></div><input
-                            type="hidden" name="next" value="/"><input type="hidden" name="src"><input type="hidden"
-                            name="ref"><input type="hidden" name="ageVerified" value="0"><input type="hidden"
-                            name="subscribeNews" value="0"><input type="hidden" name="app" value="web">
+                        <div class="btn-container"><a class="btn left" id='signUpBtn' href="javascript:void(0)">Sign
+                                up</a></div><input type="hidden" name="next" value="/"><input type="hidden"
+                            name="src"><input type="hidden" name="ref"><input type="hidden" name="ageVerified"
+                            value="0"><input type="hidden" name="subscribeNews" value="0"><input type="hidden"
+                            name="app" value="web">
                     </form>
                 </div>
             </section>
@@ -94,20 +98,22 @@
                     <h2>Log in</h2>
                     <p class="lead">Connect with a social network</p>
                     <div class="social-signup"><a class="btn-connect-option faceebook" href="https://www.facebook.com/">
-                        Facebook </a><a class="btn-connect-option google"
-                        href="https://www.google.com/account/about/"> Google </a>
-                </div>
+                            Facebook </a><a class="btn-connect-option google"
+                            href="https://www.google.com/account/about/"> Google </a>
+                    </div>
                     <form id="login-email" action="/login" method="POST"><input type="hidden" name="next" value="/">
                         <p class="lead">Log in with your Email</p>
-                        <div class="field"><label  class='label' for="login-email-name">Email</label><input id="emailLogInput"
-                                type="text" name="email" required></div>
+                        <div class="field"><label class='label' for="login-email-name">Email</label><input
+                                id="emailLogInput" type="text" name="email" required></div>
                         <div class="field"><label class="label" for="login-email-password">Password</label><input
                                 id="passwordLogInput" type="password" name="password" required>
-                        
+
                         </div>
-                        <div class="btn-container"><input class="btn left" type="submit" id='loginButton' value="Log in"><a
-                                class="forgot-password" href="/recover" id='forgetPassword'> Forgot password </a></div>
+                        <div class="btn-container"><input class="btn left" type="submit" id='loginButton'
+                                value="Log in"><a class="forgot-password" href="/recover" id='forgetPassword'> Forgot
+                                password </a></div>
                     </form>
+                    <div id='errorCont'></div>
                     <div class="get-the-app-component">
                         <div class="get-the-app">
                             <h3>Get 9GAG app</h3>
@@ -965,6 +971,7 @@
 </script>
 <script src='assets/uttils.js'></script>
 <script src='assets/userModel.js'></script>
+<script src='assets/modalControler.js'></script>
 <script src='assets/userControler.js'></script>
 
 </html>
