@@ -11,11 +11,11 @@ class Article {
 }
 
 const data = [];
-data.push(new Article('Bulgaria 🇧🇬' , '16.02.2021', 'Положението е трагично', 'images/data/0.jpg', '44', '4', 'Everything about Bulgaria'));
-data.push(new Article('Bulgaria 🇧🇬', '16.02.2021', 'Родната журналистика', 'images/data/1.jpg', '19', '4'));
-data.push(new Article('Bulgaria 🇧🇬', '15.02.2021', 'В памет на полит елита', 'images/data/2.jpg', '41', '3'));
-data.push(new Article('Bulgaria 🇧🇬', '15.02.2021', 'Високо, високо, високо!', 'images/data/3.jpg', '15', '6'));
-data.push(new Article('Bulgaria 🇧🇬', '15.02.2021', 'Ugh...when you just wake-up and life allready is hating you', 'images/data/4.jpg', '12', '4'));
+data.push(new Article('Bulgaria' , '16.02.2021', 'Положението е трагично', 'images/data/0.jpg', '44', '4', 'Everything about Bulgaria'));
+data.push(new Article('Bulgaria', '16.02.2021', 'Родната журналистика', 'images/data/1.jpg', '19', '4'));
+data.push(new Article('Bulgaria', '15.02.2021', 'В памет на полит елита', 'images/data/2.jpg', '41', '3'));
+data.push(new Article('Bulgaria', '15.02.2021', 'Високо, високо, високо!', 'images/data/3.jpg', '15', '6'));
+data.push(new Article('Bulgaria', '15.02.2021', 'Ugh...when you just wake-up and life allready is hating you', 'images/data/4.jpg', '12', '4'));
 data.push(new Article('Funny', '17.02.2021', 'Being rich comes with a price', 'images/data/5.jpg', '0', '19', 'Why so serious'));
 data.push(new Article('Funny', '17.02.2021', 'Texas never fails to entertain', 'images/data/6.jpg', '2010', '332'));
 data.push(new Article('Funny', '17.02.2021', 'Okay, class bring out your laptops and we rush at B site', 'images/data/7.jpg', '977', '55'));
@@ -36,11 +36,11 @@ data.push(new Article('WTF', '19.02.2021', 'Real inspirational Donald', 'images/
 data.push(new Article('WTF', '19.02.2021', 'Crows', 'images/data/22.jpg', '168', '8'));
 data.push(new Article('WTF', '19.02.2021', 'Sweet merciful Christ...', 'images/data/23.jpg', '46', '18'));
 data.push(new Article('WTF', '19.02.2021', 'Dang dude', 'images/data/24.jpg', '4236', '139'));
-data.push(new Article('Cryptocurrency 🆕', '19.02.2021', 'This is how close ETH is to a massive breakout', 'images/data/25.jpg', '9', '1', 'Everything about Bitcoin (BTC), Ethereum (ETH), Dogecoins...'));
-data.push(new Article('Cryptocurrency 🆕', '19.02.2021', 'Black or yellow Lambo?', 'images/data/26.jpg', '0', '3'));
-data.push(new Article('Cryptocurrency 🆕', '19.02.2021', 'It\'s an okay post I would say', 'images/data/27.jpg', '5', '1'));
-data.push(new Article('Cryptocurrency 🆕', '19.02.2021', 'My actual portfolio, in total 1.700€ Tell me your thoughts', 'images/data/28.jpg', '12', '50'));
-data.push(new Article('Cryptocurrency 🆕', '19.02.2021', 'Bitcoin hitting this high and is now Dogecoin time', 'images/data/29.jpg', '0', '1'));
+data.push(new Article('Cryptocurrency', '19.02.2021', 'This is how close ETH is to a massive breakout', 'images/data/25.jpg', '9', '1', 'Everything about Bitcoin (BTC), Ethereum (ETH), Dogecoins...'));
+data.push(new Article('Cryptocurrency', '19.02.2021', 'Black or yellow Lambo?', 'images/data/26.jpg', '0', '3'));
+data.push(new Article('Cryptocurrency', '19.02.2021', 'It\'s an okay post I would say', 'images/data/27.jpg', '5', '1'));
+data.push(new Article('Cryptocurrency', '19.02.2021', 'My actual portfolio, in total 1.700€ Tell me your thoughts', 'images/data/28.jpg', '12', '50'));
+data.push(new Article('Cryptocurrency', '19.02.2021', 'Bitcoin hitting this high and is now Dogecoin time', 'images/data/29.jpg', '0', '1'));
 data.push(new Article('Anime & Manga', '19.02.2021', 'Works for me', 'images/data/30.jpg', '137', '5', 'Anime memes, news, GIFs and discussions.'));
 data.push(new Article('Anime & Manga', '19.02.2021', 'Too weak Sasuke', 'images/data/31.jpg', '20', '1'));
 data.push(new Article('Anime & Manga', '19.02.2021', 'Yes, I am not crying...', 'images/data/32.jpg', '29', '2'));

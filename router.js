@@ -6,14 +6,14 @@ let partials = Handlebars.compile(document.getElementById('partials').innerHTML)
 window.addEventListener('hashchange', router);
 
 function router(e) {
+    let hash = location.hash.slice(1);
+
     try {
         document.querySelector('.selected').classList.remove('selected');
-        document.querySelector(`#scroller a[href$="${location.hash.slice(1)}"]`).parentElement.classList.add('selected');
+        document.querySelector(`#scroller a[href$="#${hash}"]`).parentElement.classList.add('selected');
     } catch (err) {
         console.log(err);
     }
-
-    let hash = location.hash.slice(1);
 
     if (hash.includes('-')) {
         hash = hash.replace(/-/g, ' ');
