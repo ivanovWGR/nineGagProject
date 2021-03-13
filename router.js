@@ -125,9 +125,6 @@ function router(e) {
         }
     }());
 
-
-
-
     function renderAndSortArticles(sortingFunction) {
         context.articles = data.slice().sort((a, b) => sortingFunction(a, b)).slice(0, 5);
         middleSection.innerHTML = partials(context);
