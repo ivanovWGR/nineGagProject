@@ -655,6 +655,7 @@ li:hover i.star, li:hover i.more, .hot {
 
 .sidebar {
     position: relative;
+    top: -3660px;
     display: block;
     float: right;
     width: 300px;

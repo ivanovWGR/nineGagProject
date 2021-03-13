@@ -1,3 +1,5 @@
+location.hash = '#Hot';
+
 Handlebars.registerPartial('article', document.getElementById('myArticlePartial').innerHTML);
 
 let template = Handlebars.compile(document.getElementById('myMiddleSection').innerHTML);
