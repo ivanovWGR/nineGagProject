@@ -9,16 +9,21 @@
     const logIn = getById('logIn');
 
 
-
     const emailModalBtn = getById('emailModalBtn');
     const loginModalBtn = getById('loginModalBtn');
 
+
     singUp.addEventListener('click', function () {
-        modalCont.style.display = 'block';
-        if (modalCont.style.display === 'block') {
-            closeBtn.addEventListener('click', function () {
-                modalCont.style.display = 'none';
-            })
+        if (singUp.innerText === 'Sign up') {
+            modalCont.style.display = 'block';
+            if (modalCont.style.display === 'block') {
+                closeBtn.addEventListener('click', function () {
+                    modalCont.style.display = 'none';
+                })
+            }
+        } else {
+            //TODO  here will be update modal;
+            console.log('here')
         }
     })
 
@@ -35,9 +40,9 @@
 
     })
 
-    logIn.addEventListener('click',()=>{
+    logIn.addEventListener('click', () => {
         modalLogin.style.display = 'block';
-       
+
     })
 
     loginModalBtn.addEventListener('click', () => {

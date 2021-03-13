@@ -145,6 +145,15 @@ body {
     background-position: -330px 0;
 }
 
+#moods:hover{
+    display: inline-block;
+    background-image: url(images/Icons.png);
+    background-size: 360px 60px;
+    background-position: -330px 0;
+    background-position-y: -30px;
+    text-decoration: none;
+}
+
 #search {
     display: block;
     width: 30px;
@@ -211,7 +220,7 @@ body {
     border-radius: 50%;
 }
 
-#bellIcon a {
+#bellIcon a {            
     display: none;
     width: 30px;
     height: 30px;

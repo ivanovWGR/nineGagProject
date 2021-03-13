@@ -2,6 +2,8 @@
 (function () {
   const signUpRegBtn = getById('signUpBtn');
   const loginButton = getById("loginButton");
+  const profilePicutre = document.querySelector('#profilePic img');
+  const moods = getById('moods');
 
 
   let nameInputReg = getById("nameInputReg");
@@ -18,6 +20,11 @@
     let email = loginEmail.value;
     let password = loginPassword.value;
     if (userStorage.login(email, password)) {
+      logIn.style.display = 'none';
+      getById('signUp').innerText = 'Update';
+      document.querySelector('#bellIcon a').style.display='inline-block';
+      profilePicutre.style.display = 'inline-block';
+
       errorCont.innerHTML = '';
       modalLogin.style.display = 'none';
       location.hash = '#Fresh';
@@ -31,7 +38,6 @@
 
   signUpRegBtn.addEventListener("click", function (ev) {
     ev.preventDefault();
-
 
     const name = nameInputReg.value;
     const email = emailInputReg.value;
@@ -55,4 +61,17 @@
     }
 
   });
+
+  moods.addEventListener('click',()=>{
+          if (moods.style.display==='block'){
+            document.body.style.backgroundColor='white';
+            moods.style.display='inline-block';
+
+          }
+          else {
+            document.body.style.backgroundColor='black';
+            moods.style.display='block';
+            // TODO must be white headers and icons 
+          }
+  })
 })();
