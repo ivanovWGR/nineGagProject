@@ -1,10 +1,8 @@
-
 (function () {
   const signUpRegBtn = getById('signUpBtn');
   const loginButton = getById("loginButton");
   const profilePicutre = document.querySelector('#profilePic img');
   const moods = getById('moods');
-
 
   let nameInputReg = getById("nameInputReg");
   let emailInputReg = getById("emailInputReg");
@@ -14,11 +12,12 @@
   let errorCont = getById('errorCont');
   let errorReg = getById('errorRegister');
 
-
   loginButton.addEventListener("click", function (ev) {
     ev.preventDefault();
+
     let email = loginEmail.value;
     let password = loginPassword.value;
+
     if (userStorage.login(email, password)) {
       logIn.style.display = 'none';
       getById('signUp').innerText = 'Update';
@@ -30,11 +29,10 @@
       location.hash = '#Fresh';
     } else {
       errorCont.style.color = 'red';
-      errorCont.innerHTML = 'Wrong Email or password.Try again!';
+      errorCont.innerHTML = 'Wrong email or password. Try again!';
     }
+    
   });
-
-
 
   signUpRegBtn.addEventListener("click", function (ev) {
     ev.preventDefault();
@@ -48,30 +46,26 @@
       userStorage.register(name, email, password);
       modalEmail.style.display = 'none';
       modalLogin.style.display = 'block';
-      nameInputReg.value = '';
-      emailInputReg.value = '';
-      passwordInputReg.value = '';
-    }
-    else {
+    } else {
       errorReg.style.color = 'red';
-      errorReg.innerHTML = 'Wrong Email,password or username.Try again!';
-      nameInputReg.value = '';
-      emailInputReg.value = '';
-      passwordInputReg.value = '';
+      errorReg.innerHTML = 'Wrong email, password or username. Try again!';
     }
 
+    nameInputReg.value = '';
+    emailInputReg.value = '';
+    passwordInputReg.value = '';
   });
 
   moods.addEventListener('click', () => {
+
     if (moods.style.display === 'block') {
       document.body.style.backgroundColor = 'white';
       moods.style.display = 'inline-block';
-
-    }
-    else {
+    } else {
       document.body.style.backgroundColor = 'black';
       moods.style.display = 'block';
       // TODO must be white headers and icons 
     }
-  })
+
+  });
 })();
