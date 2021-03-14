@@ -1,4 +1,5 @@
 (function () {
+    const closePost = getById('closePost')
     const modalLogin = getById('modalLogin');
     const modalEmail = getById('modalEmail');
     const modalCont = getById('modalCont');
@@ -7,6 +8,12 @@
     const close = getById('close');
     const closeLogIn = getById('closeLogIn');
     const logIn = getById('logIn');
+    const uploadModal = getById('uploadModal');
+    const postBtn = getById('postBtn');
+    const postModal = getById('postModal');
+    const closeUpload = getById('closeUpload');
+    const backBtn = getById('backBtn');
+    const uploadPost = getById('uploadPost');
 
 
     const emailModalBtn = getById('emailModalBtn');
@@ -15,6 +22,7 @@
 
     singUp.addEventListener('click', function () {
         if (singUp.innerText === 'Sign up') {
+            console.log(postModal)
             modalCont.style.display = 'block';
             if (modalCont.style.display === 'block') {
                 closeBtn.addEventListener('click', function () {
@@ -23,11 +31,23 @@
             }
         } else {
             fetch('assets/views/uploadModal.hbs')
-            .then(res=>res.text())
-            .then(res=>getUploadModal());
-            
-            
+                .then(res => res.text())
+                .then(res => getUploadModal(res));
+            postModal.style.display = 'none';
+            uploadModal.style.display = 'block';
+            closeUpload.addEventListener('click', () => {
+                uploadModal.style.display = 'none';
+            })
+
+            postBtn.addEventListener('click', () => {
+                postModal.style.display = 'block';
+                uploadModal.style.display = 'none';
+            })
         }
+    })
+
+    closePost.addEventListener('click', () => {
+        postModal.style.display = 'none';
     })
 
     emailModalBtn.addEventListener('click', () => {

@@ -877,9 +877,9 @@
             </section>
         </div>
     </div>
-    <div  id='uploadModal'>
+    <div id='uploadModal'>
         <section id="modal-upload" class="badge-overlay-upload modal upload">
-            <a class="btn-close badge-overlay-close" href="javascript:void(0);">✖</a>
+            <a class="btn-close badge-overlay-close" href="javascript:void(0);" id='closeUpload'>✖</a>
 
             <div class="badge-upload-step badge-upload-file-step">
                 <section id="upload-file" class="select-file">
@@ -894,7 +894,7 @@
                         </a>
                         <div class="other-source">
                             <div class="wrapper">
-                                <a href="javascript:void(0);" id="jsid-upload-url-btn" class="source pic-url">
+                                <a href="javascript:void(0);" class="source pic-url" id='postBtn'>
                                     <p>Paste image URL</p>
                                 </a>
                             </div>
@@ -913,6 +913,53 @@
                     </div>
                 </section>
             </div>
+    </div>
+    <div id='postModal' class="overlay-scroll-container">
+        <section class="badge-overlay-upload modal upload">
+            <a class="btn-close badge-overlay-close" href="javascript:void(0);" id='closePost'>✖</a>
+            <div class="badge-upload-step badge-upload-info-step badge-upload-tag-step hide">
+                <section id="upload-info">
+                    <header>
+                        <h3>Give your post a title</h3>
+                        <p>An accurate, descriptive title can help people discover your post.</p>
+                    </header>
+                    <div class="spacer">
+                        <div class="field post-info">
+                            <textarea id="jsid-upload-title" placeholder="Describe your post..." data-minlength="3"
+                                data-maxlength="280"></textarea>
+                            <p id="jsid-char-count" class="count">280</p>
+                        </div>
+                        <div class="field tag badge-upload-tag">
+                            <label>Tag</label>
+                            <div class="scroll-container badge-upload-scroll-container">
+                                <div class="tag-list badge-upload-tag-list">
+                                </div>
+                                <input type="text" id="jsid-upload-tag-input" placeholder="section"
+                                    data-placeholder="section" data-lengthmax="25" data-lengthmin="1">
+                                <input type="text" id="jsid-upload-tag-input" placeholder="data" data-placeholder="data"
+                                    data-lengthmax="25" data-lengthmin="1">
+                                <input type="text" id="jsid-upload-tag-input" placeholder="title"
+                                    data-placeholder="title" data-lengthmax="25" data-lengthmin="1">
+                                <input type="text" id="jsid-upload-tag-input" placeholder="image"
+                                    data-placeholder="image" data-lengthmax="25" data-lengthmin="1">
+                            </div>
+                        </div>
+                        <div class="field checkbox">
+                            <label>
+                                <p>This is sensitive</p>
+                                <input id="jsid-upload-is-nsfw" type="checkbox">
+                            </label>
+                        </div>
+                </section>
+                <div class="btn-container">
+                    <a class="badge-upload-info-next-btn btn right disabled" href="javascript:void(0);"
+                        id='uploadPost'>Upload</a>
+                    <a class="badge-upload-info-back-btn btn grey right" href="javascript:void(0);"
+                        id='backBtn'>Back</a>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 <script id="myMiddleSection" type="text/x-handlebars-template">
     <div id="middleSectionTop">
