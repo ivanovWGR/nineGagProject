@@ -68,7 +68,7 @@ const userStorage = (function () {
         let emailValidator = /^\w+[\w-+\.]*\@\w+([-\.]\w+)*\.[a-zA-Z]{2,}$/;
 
         if (!email.match(emailValidator)) {
-          alert("Not a valid еmail аddress!");
+          alert("Invalid еmail аddress!");
 
           return false;
         }
