@@ -22,8 +22,11 @@
                 })
             }
         } else {
-            //TODO  here will be update modal;
-            console.log('here')
+            fetch('assets/views/uploadModal.hbs')
+            .then(res=>res.text())
+            .then(res=>getUploadModal());
+            
+            
         }
     })
 

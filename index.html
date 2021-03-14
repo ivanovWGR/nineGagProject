@@ -877,6 +877,42 @@
             </section>
         </div>
     </div>
+    <div  id='uploadModal'>
+        <section id="modal-upload" class="badge-overlay-upload modal upload">
+            <a class="btn-close badge-overlay-close" href="javascript:void(0);">✖</a>
+
+            <div class="badge-upload-step badge-upload-file-step">
+                <section id="upload-file" class="select-file">
+                    <header>
+                        <h3>Upload a Post</h3>
+                        <p>Choose how you want to upload the post</p>
+                    </header>
+                    <div class="spacer">
+                        <a href="javascript:void(0);" id="jsid-upload-file-btn" class="source file dz-clickable">
+                            <p>Drop image to upload or</p>
+                            <span class="btn">Choose files...</span>
+                        </a>
+                        <div class="other-source">
+                            <div class="wrapper">
+                                <a href="javascript:void(0);" id="jsid-upload-url-btn" class="source pic-url">
+                                    <p>Paste image URL</p>
+                                </a>
+                            </div>
+                            <div class="wrapper">
+                                <a class="source vid-url" target="_blank" href="https://9gag.com/apps?ref=videoUpload">
+                                    <p>Paste Video URL</p>
+                                </a>
+                            </div>
+                            <div class="wrapper">
+                                <a href="https://memeful.com/generator?ref=9gag" target="_blank"
+                                    onclick="GAG.GA.track('UploadAction', 'TapMakeMeme');" class="source meme">
+                                    <p>Make meme</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
 </body>
 <script id="myMiddleSection" type="text/x-handlebars-template">
     <div id="middleSectionTop">

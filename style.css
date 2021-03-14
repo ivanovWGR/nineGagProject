@@ -1216,3 +1216,241 @@ section#signup p.alternative a {
 .hidden {
     display: none;
 }
+
+#uploadModal {  
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 13;
+overflow: hidden;
+background-color: rgba(0,0,0,.8);  
+display: none;
+}
+section.modal header {
+
+    padding-bottom: 16px;
+}
+
+section.modal header h3 {
+    margin: 32px 32px 16px;
+    font-size: 24px;
+}
+
+section.modal header p {
+    margin: 0 32px 8px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+section.modal .spacer {
+
+    margin: 0;
+    outline: 0;
+    padding: 0 32px;
+
+}
+
+.modal.upload .source {
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    border-radius: 2px;
+    height: 120px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    display: block;
+    position: relative;
+    margin: 0 4px 0 0;
+}
+
+.modal.upload .source.pic-url:after,
+.modal.upload .source.vid-url:after {
+    content: "";
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 28px;
+    width: 48px;
+    height: 48px;
+    margin-left: -24px;
+}
+
+.modal.upload .source.pic-url:after {
+    background: url(images/meme.png) -76px 0 no-repeat;
+    background-size: 224px 82px;
+}
+
+.modal.upload .source.file {
+
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000;
+    display: block;
+    position: relative;
+    height: 240px;
+    font-size: 16px;
+    margin: 0 0 16px;
+}
+
+.modal.upload .source.file p {
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    margin-top: 140px;
+}
+
+.modal.upload .source.file:after {
+    content: "";
+    background: url(images/meme.png) no-repeat;
+    background-size: 224px 82px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    width: 76px;
+    height: 82px;
+    top: 45px;
+    margin-left: -38px;
+}
+
+.modal.upload .source.file span.btn {
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    line-height: 36px;
+    height: 36px;
+    padding: 0 16px;
+    background-color: #09f;
+    display: inline-block;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+
+.modal.upload .source.vid-url:after {
+    background: url(images/meme.png) -124px 0 no-repeat;
+    background-size: 224px 82px;
+}
+
+.modal.upload .other-source {
+
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    width: 100%;
+}
+
+.modal.upload .other-source .wrapper {
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+.modal.upload .wrapper:first-child .source {
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    border-radius: 2px;
+    height: 120px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    display: block;
+    position: relative;
+    margin: 0 4px 0 0;
+}
+
+.modal.upload .source p {
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    margin-top: 88px;
+}
+
+
+.modal.upload .source.vid-url:after {
+    content: "";
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 28px;
+    width: 48px;
+    height: 48px;
+    margin-left: -24px;
+}
+
+
+
+.modal.upload .other-source .wrapper {
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+.modal.upload .source {
+    border-radius: 2px;
+    margin: 0 4px;
+    height: 120px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    display: block;
+    position: relative;
+}
+
+.modal.upload .source p {
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    margin-top: 88px;
+}
+
+.modal.upload .wrapper .tooltip {
+    margin: 0;
+    outline: 0;
+    position: absolute;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    width: 80%;
+    left: 5%;
+    border-radius: 2px;
+    padding: 8px;
+    font-size: 14px;
+    top: 132px;
+    display: none;
+}
+
+.modal.upload .source.meme:after {
+    content: "";
+    background: url(images/meme.png) -172px 0 no-repeat;
+    background-size: 224px 82px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    width: 52px;
+    height: 42px;
+    margin-left: -29px;
+}
