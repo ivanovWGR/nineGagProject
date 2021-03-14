@@ -11,16 +11,15 @@
   let loginPassword = getById("passwordLogInput");
   let errorCont = getById('errorCont');
   let errorReg = getById('errorRegister');
+  let headerButton = getById('signUp');
 
-  loginButton.addEventListener("click", function (ev) {
-    ev.preventDefault();
-
+  function checkIfLoggedIn() {
     let email = loginEmail.value;
     let password = loginPassword.value;
-
     if (userStorage.login(email, password)) {
+      console.log('vutre');
       logIn.style.display = 'none';
-      getById('signUp').innerText = 'Update';
+      headerButton.innerText = 'Update';
       document.querySelector('#bellIcon a').style.display = 'inline-block';
       profilePicutre.style.display = 'inline-block';
 
@@ -31,7 +30,11 @@
       errorCont.style.color = 'red';
       errorCont.innerHTML = 'Wrong email or password. Try again!';
     }
-    
+  }
+
+  loginButton.addEventListener("click", function (ev) {
+    ev.preventDefault();
+    checkIfLoggedIn();
   });
 
   signUpRegBtn.addEventListener("click", function (ev) {
@@ -66,6 +69,7 @@
       moods.style.display = 'block';
       // TODO must be white headers and icons 
     }
-
   });
+
+
 })();

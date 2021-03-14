@@ -925,20 +925,19 @@
                     </header>
                     <div class="spacer">
                         <div class="field post-info">
-                            <textarea id="jsid-upload-title" placeholder="Describe your post..." data-minlength="3"
+                            <textarea id="description" placeholder="Describe your post..." data-minlength="3"
                                 data-maxlength="280"></textarea>
                             <p id="jsid-char-count" class="count">280</p>
                         </div>
-                        <div class="field tag badge-upload-tag">
-                            <label>Tag</label>
+                        <div class="tag badge-upload-tag">
                             <div class="scroll-container badge-upload-scroll-container">
-                                <input type="text" id="jsid-upload-tag-input" placeholder="section"
-                                    data-placeholder="section" data-lengthmax="25" data-lengthmin="1">
-                                <input type="text" id="jsid-upload-tag-input" placeholder="data" data-placeholder="data"
-                                    data-lengthmax="25" data-lengthmin="1">
-                                <input type="text" id="jsid-upload-tag-input" placeholder="title"
-                                    data-placeholder="title" data-lengthmax="25" data-lengthmin="1">
-                                <input type="text" id="jsid-upload-tag-input" placeholder="image"
+                                <input type="text" id="sectionInput" placeholder="Section"
+                                    data-placeholder="Section" data-lengthmax="25" data-lengthmin="1">
+                                <!-- <input type="text" id="dateInput" placeholder="Date" data-placeholder="data"
+                                    data-lengthmax="25" data-lengthmin="1"> -->
+                                <input type="text" id="titleInput" placeholder="Title"
+                                    data-placeholder="Title" data-lengthmax="25" data-lengthmin="1">
+                                <input type="text" id="urlInput" placeholder="Image URL"
                                     data-placeholder="image" data-lengthmax="25" data-lengthmin="1">
                             </div>
                         </div>
@@ -1014,5 +1013,6 @@
 <script src='assets/userModel.js'></script>
 <script src='assets/modalControler.js'></script>
 <script src='assets/userControler.js'></script>
+<script src='assets/postControler.js'></script>
 
 </html>

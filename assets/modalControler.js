@@ -13,7 +13,6 @@
     const postModal = getById('postModal');
     const closeUpload = getById('closeUpload');
     const backBtn = getById('backBtn');
-    const uploadPost = getById('uploadPost');
     const emailModalBtn = getById('emailModalBtn');
     const loginModalBtn = getById('loginModalBtn');
 
@@ -72,7 +71,7 @@
         modalCont.style.display = 'none';
 
         if (modalLogin.style.display === 'block') {
-            // TO DO SOMETING HERE!!!
+            // TODO 
         }
 
     });
@@ -80,4 +79,9 @@
     closeLogIn.addEventListener('click', () => {
         modalLogin.style.display = 'none';
     });
+
+    backBtn.addEventListener('click',()=>{
+        postModal.style.display='none';
+        uploadModal.style.display='block';
+    })
 })();

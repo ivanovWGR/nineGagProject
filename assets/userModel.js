@@ -55,7 +55,7 @@ const userStorage = (function () {
       this.users.push(new User(name, email, password));
       localStorage.setItem('users', JSON.stringify(this.users));
     }
-
+   
     login(email, password) {
       const isUserLogIn = this.users.some((user) => user.email === email && user.password === password);
 

@@ -1112,7 +1112,7 @@ section#signup p.alternative a {
     font-weight: 700;
     cursor: pointer;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     text-align: center;
     box-sizing: content-box;
 }
@@ -1167,7 +1167,7 @@ section#signup p.alternative a {
     font-weight: 700;
     cursor: pointer;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     text-align: center;
     box-sizing: content-box;
 }
@@ -1177,7 +1177,7 @@ section#signup p.alternative a {
     padding: 0;
     outline: 0;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     color: #999;
     float: right;
     font-size: 14px;
@@ -1383,7 +1383,6 @@ section.modal .spacer {
     margin-top: 88px;
 }
 
-
 .modal.upload .source.vid-url:after {
     content: "";
     overflow: hidden;
@@ -1394,8 +1393,6 @@ section.modal .spacer {
     height: 48px;
     margin-left: -24px;
 }
-
-
 
 .modal.upload .other-source .wrapper {
     width: 33.33%;
@@ -1481,16 +1478,26 @@ section.modal {
 #postModal .spacer {
     margin: 0;
     outline: 0;
-    padding: 0 50px;
-    height: 540px;
-    width: 275px;
+    padding: 0 32px;
 }
+#postModal h3 {
+    font-weight: bolder;
+}
+
 .modal.upload .field.post-info {
-    position: relative;
-    height: 128px;
-    padding: 16px;
-    box-sizing: border-box;
-    border-radius: 2px 2px 0 0;
+ position: relative;
+ height: 128px;
+ padding: 16px;
+ box-sizing: border-box;
+ border-radius: 2px 2px 0 0;
+ margin-bottom:20px;
+
+ }
+
+ .modal.upload .field {
+    margin: 0;
+    border: 1px solid #ddd;
+    border-bottom: none;
 }
 
 .badge-upload-step{
@@ -1503,12 +1510,18 @@ section.modal header {
 }
 
 .modal.upload .field.post-info textarea {
+    padding: 9px;
+    resize: none;
+    outline: 0;
+    line-height: 20px;
+    margin: 6px 0;
+    display: block;
     height: 58px;
     border: none;
     border-radius: 0;
     position: absolute;
     top: 16px;
-    left: 128px;
+    left: 80px;
     right: 16px;
     width: 320px;
     margin-top: 0;
@@ -1522,28 +1535,31 @@ section.modal header {
     color: #999;
     font-size: 12px;
 }
+.badge-upload-tag input {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    width: 350px;
+}
 
 .badge-upload-tag {
     padding: 0;
     outline: 0;
     position: relative;
-    border: 1px solid #ddd;
-    border-bottom: none;
     margin: 0;
-}
-
-.modal.upload .field.tag label {
-    line-height: 20px;
-    height: 20px;
-    padding: 14px;
-    font-weight: 400;
-    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: column;
+    padding: 10px;
+    
 }
 
 .modal.upload .field.checkbox {
 margin: 0;
 height: 48px;
 }
+
 .modal.upload .field.checkbox label {
 display: block;
 height: 20px;
@@ -1571,4 +1587,49 @@ margin-left: 16px;
 
 section.modal .btn-container .btn.right {
 margin-left: 16px;
+}
+
+#uploadPost{
+margin: 0;
+outline: 0;
+float: right;
+color: #fff;
+background-color: #09f;
+padding: 8px 16px;
+height: 20px;
+border: none;
+border-radius: 2px;
+font-weight: 700;
+cursor: pointer;
+text-decoration: none;
+display:block;
+text-align: center;
+box-sizing: content-box;
+margin-left: 16px;
+margin-top: 20px;
+}
+
+#backBtn{
+margin: 0;
+outline: 0;
+float: right!important;
+padding: 8px 16px;
+height: 20px;
+border: none;
+border-radius: 2px;
+font-weight: 700;
+cursor: pointer;
+text-decoration: none;
+display:block;
+text-align: center;
+-webkit-appearance: none;
+box-sizing: content-box;
+background-color: #f4f4f4;
+color: #999;
+margin-left: 16px;
+margin-top:20px;
+}
+
+.badge-upload-scroll-container{
+  padding-left: 30px;
 }
