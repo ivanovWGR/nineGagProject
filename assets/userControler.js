@@ -22,7 +22,7 @@
     if (userStorage.login(email, password)) {
       logIn.style.display = 'none';
       getById('signUp').innerText = 'Update';
-      document.querySelector('#bellIcon a').style.display='inline-block';
+      document.querySelector('#bellIcon a').style.display = 'inline-block';
       profilePicutre.style.display = 'inline-block';
 
       errorCont.innerHTML = '';
@@ -62,16 +62,16 @@
 
   });
 
-  moods.addEventListener('click',()=>{
-          if (moods.style.display==='block'){
-            document.body.style.backgroundColor='white';
-            moods.style.display='inline-block';
+  moods.addEventListener('click', () => {
+    if (moods.style.display === 'block') {
+      document.body.style.backgroundColor = 'white';
+      moods.style.display = 'inline-block';
 
-          }
-          else {
-            document.body.style.backgroundColor='black';
-            moods.style.display='block';
-            // TODO must be white headers and icons 
-          }
+    }
+    else {
+      document.body.style.backgroundColor = 'black';
+      moods.style.display = 'block';
+      // TODO must be white headers and icons 
+    }
   })
 })();

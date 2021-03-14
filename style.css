@@ -1466,6 +1466,37 @@ section.modal .spacer {
     background-color: rgba(0, 0, 0, .8);
     display: none;
 }
+section.modal {
+    width: 540px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -270px;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    border-radius: 2px;
+    padding-bottom: 32px;
+}
+
+#postModal .spacer {
+    margin: 0;
+    outline: 0;
+    padding: 0 50px;
+    height: 540px;
+    width: 275px;
+}
+.modal.upload .field.post-info {
+    position: relative;
+    height: 128px;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 2px 2px 0 0;
+}
+
+.badge-upload-step{
+    height: 540px;
+    width: 500px;
+}
 
 section.modal header {
     padding-bottom: 16px;
