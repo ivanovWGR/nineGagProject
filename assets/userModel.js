@@ -4,6 +4,7 @@ const userStorage = (function () {
       this.name = name;
       this.email = email;
       this.password = password;
+      this.IsLoggedIn = false;
 
     }
 
@@ -55,11 +56,26 @@ const userStorage = (function () {
       this.users.push(new User(name, email, password));
       localStorage.setItem('users', JSON.stringify(this.users));
     }
-   
-    login(email, password) {
-      const isUserLogIn = this.users.some((user) => user.email === email && user.password === password);
 
-      return isUserLogIn;
+    login(email, password) {
+      
+      let currentUser = this.users.some(user => user.email === email && user.password === password);
+      if (currentUser) {
+        this.users.forEach(user => {
+          if (user.email === email && user.password === password) {
+            user.IsLoggedIn = true;
+          } else {
+            user.IsLoggedIn = false;
+          }
+        })
+        localStorage.setItem('users', JSON.stringify(this.users));
+
+      }
+      return currentUser;
+    }
+
+    getCurrentUser() {
+      return this.users.find(user => user.IsLoggedIn === true);
     }
 
     validate(email, password, username) {

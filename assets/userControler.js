@@ -4,7 +4,8 @@
   const profilePicutre = document.querySelector('#profilePic img');
   const moods = getById('moods');
   const AVATAR = getById('avatar');
-  const profileInfo = getById('profileInfo')
+  const profileInfo = getById('profileInfo');
+  const logOutBtn = getById('logOutBtn');
 
   let nameInputReg = getById("nameInputReg");
   let emailInputReg = getById("emailInputReg");
@@ -14,17 +15,24 @@
   let errorCont = getById('errorCont');
   let errorReg = getById('errorRegister');
   let headerButton = getById('signUp');
+  let logged = userStorage.getCurrentUser();
+
+
+  if (logged) {
+    checkIfLoggedIn()
+  }
 
   function checkIfLoggedIn() {
     let email = loginEmail.value;
     let password = loginPassword.value;
-    if (userStorage.login(email, password)) {
-      console.log('vutre');
-      logIn.style.display = 'none';
-      headerButton.innerText = 'Update';
-      document.querySelector('#bellIcon a').style.display = 'inline-block';
-      profilePicutre.style.display = 'inline-block';
+    logIn.style.display = 'none';
+    headerButton.innerText = 'Update';
+    document.querySelector('#bellIcon a').style.display = 'inline-block';
+    profilePicutre.style.display = 'inline-block';
 
+    if (userStorage.login(email, password)) {
+      loginPassword.value = '';
+      loginEmail.value = '';
       errorCont.innerHTML = '';
       modalLogin.style.display = 'none';
       location.hash = '#Fresh';
@@ -81,4 +89,10 @@
       profileInfo.style.display = 'block';
     }
   })
+
+  logOutBtn.addEventListener('click',()=>{
+    localStorage.removeItem('users');
+    location.reload(); 
+  })
+
 })();
