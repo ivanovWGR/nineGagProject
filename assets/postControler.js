@@ -5,8 +5,9 @@
     let titleInput = getById('titleInput');
     let urlInput = getById('urlInput');
     let description = getById('description');
+    let noticeCont = getById('noticeCont');
     let today = new Date();
-    
+
     try {
         let dd = String(today.getDate()).padStart(2, '0');
         let mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -22,8 +23,9 @@
         let checkInputs = validateInputs(titleInput.value, urlInput.value, description.value);
         if (isExist && checkInputs) {
             data.unshift(new Article(value, today, titleInput.value, urlInput.value, 0, 0, description.value));
-            postModal.style.display='none';
-            location.hash=value;
+            postModal.style.display = 'none';
+            noticeCont.style.display = 'block';
+            location.hash = value;
         }
     })
 

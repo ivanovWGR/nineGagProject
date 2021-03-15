@@ -6,6 +6,8 @@
   const AVATAR = getById('avatar');
   const profileInfo = getById('profileInfo');
   const logOutBtn = getById('logOutBtn');
+  const emptyCont = getById('noticeCont');
+
 
   let nameInputReg = getById("nameInputReg");
   let emailInputReg = getById("emailInputReg");
@@ -53,6 +55,8 @@
     const name = nameInputReg.value;
     const email = emailInputReg.value;
     const password = passwordInputReg.value;
+    const bell=getById('bell');
+
 
     if (userStorage.validate(email, password, name)) {
       errorReg.innerHTML = '';
@@ -93,6 +97,10 @@
   logOutBtn.addEventListener('click',()=>{
     localStorage.removeItem('users');
     location.reload(); 
+  })
+
+  bell.addEventListener('click',()=>{
+          emptyCont.style.display='none';
   })
 
 })();
