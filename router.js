@@ -67,12 +67,22 @@ function router(e) {
 
             switch (action) {
                 case 'up':
+
+                if (e.target.name != 'used') {
+                    e.target.name = 'used';
                     pointsValue++;
                     doubleEffect();
+                }
+                    
                     break;
                 case 'down':
+
+                if (e.target.name != 'used') {
+                    e.target.name = 'used';
                     pointsValue--;
                     doubleEffect();
+                }
+                    
                     break;
                 case 'comment':
 
