@@ -16,7 +16,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body {
+    --button-text-color:white;
+    --accent-color: black;
     line-height: 1;
+    background-color: var(--background-color);
+    color:var(--text-color);
+    color:var(--a-color);
+
+}
+body.dark{
+    --button-text-color:black;
+    --accent-color:white;
+    --background-color: black;
+    --transition-delay: 1s;
+    --text-color:white;
+    --a-color:white;
+}
+.theme-toogle{
+     color:var(--accent-color);
 }
 
 ol, ul {
@@ -1614,7 +1631,7 @@ margin-top: 20px;
 #backBtn{
 margin: 0;
 outline: 0;
-float: right!important;
+float: right;
 padding: 8px 16px;
 height: 20px;
 border: none;
@@ -1624,7 +1641,6 @@ cursor: pointer;
 text-decoration: none;
 display:block;
 text-align: center;
--webkit-appearance: none;
 box-sizing: content-box;
 background-color: #f4f4f4;
 color: #999;
@@ -1634,4 +1650,29 @@ margin-top:20px;
 
 .badge-upload-scroll-container{
   padding-left: 30px;
+}
+.popup-menu.user {
+    margin-left: auto;
+    left: auto;
+    right: 10px;
+    top: 48px;
+    z-index: 13;
+    min-width: 10px;
+    width: 160px;
+    display: none;
+}
+.popup-menu ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 4px 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-sizing: border-box;
+}
+.popup-menu a {
+    display: block;
+    color: #000;
+    line-height: 34px;
+    padding: 0 16px;
+    font-size: 14px;
 }

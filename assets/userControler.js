@@ -3,6 +3,8 @@
   const loginButton = getById("loginButton");
   const profilePicutre = document.querySelector('#profilePic img');
   const moods = getById('moods');
+  const AVATAR = getById('avatar');
+  const profileInfo = getById('profileInfo')
 
   let nameInputReg = getById("nameInputReg");
   let emailInputReg = getById("emailInputReg");
@@ -60,16 +62,23 @@
   });
 
   moods.addEventListener('click', () => {
-
     if (moods.style.display === 'block') {
       document.body.style.backgroundColor = 'white';
       moods.style.display = 'inline-block';
+      document.body.classList.toggle('dark');
+
     } else {
       document.body.style.backgroundColor = 'black';
       moods.style.display = 'block';
-      // TODO must be white headers and icons 
+      document.body.classList.toggle('dark');
     }
   });
 
-
+  AVATAR.addEventListener('click', () => {
+    if (profileInfo.style.display === 'block') {
+      profileInfo.style.display = 'none'
+    } else {
+      profileInfo.style.display = 'block';
+    }
+  })
 })();
